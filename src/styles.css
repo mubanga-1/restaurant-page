@@ -7,4 +7,27 @@
 body {
     background-color: grey;
     background-image: url("./coffee.png");
+    background-size: cover;
+}
+
+header {
+    padding: 1.2rem;
+}
+
+nav, .links {
+    display: flex;
+}
+
+.links {
+    gap: .8rem;
+}
+
+nav button {
+    width: 4.6rem;
+    height: 1.5rem;
+    text-transform: capitalize;
+    font-size: 1.2rem;  
+    background-color: #f1f2f3;
+    border: none;
+    border-radius: .5rem;
 }
