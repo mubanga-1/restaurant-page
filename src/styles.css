@@ -31,6 +31,7 @@ nav {
     font-size: 3rem;
     font-family: "Dancing Script", sans-serif;
     color: #fff;
+    transition: 1s ease;
 }
 
 nav button {
@@ -40,5 +41,16 @@ nav button {
     font-size: 1.2rem;  
     background-color: transparent;
     border: none;
-    border-radius: .5rem;
+    border-radius: .8rem;
+    transition: 1s ease;
+}
+
+nav button:hover {
+    background-color: #f1f2f3;
+    
+}
+
+.logo div:hover, nav button:hover {
+    color: #A67B5B;
+    cursor: pointer;
 }
