@@ -1,8 +1,12 @@
 // Default import text from advertisement.txt as a string
 import advert from "./advertisement.txt";
 
+// Default import text from hours.txt as a string
+import hours from "./hours.txt";
+
 
 const advertInfo = advert.split("\n");
+const hoursInfo = hours.split("\n");
 
 
 function createHome () {
@@ -19,7 +23,7 @@ function createHome () {
 
     // Create heading for advertisement
     const adHeading = document.createElement("div");
-    adHeading.className = "ad-heading";
+    adHeading.id = "ad-heading";
     adHeading.innerText = advertInfo[0];
 
     adContainer.appendChild(adHeading);
@@ -41,14 +45,51 @@ function createHome () {
         }
     }
 
-
+    // Add each paragraph to advertisement container
     paragraphs.forEach((paragraph) => {
         adContainer.appendChild(paragraph);
     });
 
-
+    // Add advetisement container to content container
     containerDiv.appendChild(adContainer);
+
+
+    // Create a container for displaying hours on the screen
+    const hours = document.createElement("div");
+    hours.id = "service";
+    hours.className = "side";
+    hours.style.padding = "22px";
+
+    // Create heading for hours container
+    const hoursHeading = document.createElement("div");
+    hoursHeading.className = "info-heading";
+    hoursHeading.innerText = "Hours";
+
+    hours.appendChild(hoursHeading);
+
+    // Create list for Actual Days
+    const days = document.createElement("ul");
+    days.id = "days";
     
+    for (let i = 0; i < hoursInfo.length; i++) {
+        if (!(i === 0) && !(i === 7)) {
+            let day = document.createElement("li");
+            day.innerText = hoursInfo[i];
+            days.appendChild(day); 
+
+        } else if (hoursInfo[i] == "") {
+            days.appendChild(document.createElement("br"));
+
+        } else {
+            let subHeading = document.createElement("div");
+            subHeading.className = "sub-heading";
+            subHeading.innerText = hoursInfo[i];
+            days.appendChild(subHeading);
+        }
+    }
+
+    hours.appendChild(days);
+    containerDiv.appendChild(hours);    
 }
 
 createHome();
