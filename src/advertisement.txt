@@ -1,12 +1,14 @@
-🚀 Fuel Your Code. One Sip at a Time. ☕️
+🚀 Fuel Your Code. One Sip at a Time. 
 
 Developers, we get it. Long hours, endless tickets, and mind-numbing debugging marathons. 
 The grind is real—and sometimes, so is the mental fog.
+
 That’s where Dev Café Coffee comes in. 
 Specially roasted for deep thinkers and digital builders,
 our blends are engineered to energize your brain without the crash.  
 Whether you're cranking out APIs or surviving sprint planning, our coffee keeps you sharp, focused,  
 and ready to tackle even the most soul-crushing legacy code. 
+
 No more stale office brews or jittery shortcuts. Just smooth, 
 rich coffee that tastes like productivity—and feels like a second wind. 
 "Code Hard. Brew Smart.”
