@@ -4,28 +4,42 @@ import advert from "./advertisement.txt";
 // Default import text from hours.txt as a string
 import hours from "./hours.txt";
 
+// Default import text from address.txt
+import address from "./address.txt";
 
 const advertInfo = advert.split("\n");
 const hoursInfo = hours.split("\n");
+const addressInfo = address.split("\n");
+
+
+function createDomElement(elementObject) {
+    let newElement;
+
+    if (typeof elementObject.type === "string") {
+        newElement = document.createElement(elementObject.type);
+    } else {
+        throw TypeError(`${elementObject.type} field was not passed in as a string!`);
+    }
+
+    newElement.id = elementObject.id;
+    newElement.classList = elementObject.classList;
+    newElement.innerText = elementObject.text;
+
+    return newElement;
+
+}
+
 
 
 function createHome () {
     // Modify content div in order to add content for home page
-    const containerDiv = document.querySelector("#content");
-    // containerDiv.style.display = "grid";
-    // containerDiv.style.gridTemplateColumns = "4fr 1fr";
-    // containerDiv.style.width = "80%";
-    containerDiv.style.color = "white"; 
+    const containerDiv = document.querySelector("#content"); 
     
-    // Create container for advertisement
-    const adContainer = document.createElement("div");
-    adContainer.className = "ad";
+    // // Create container for advertisement
+    const adContainer = createDomElement({type: "div", id:"", classList: ["ad"], text:""});
 
     // Create heading for advertisement
-    const adHeading = document.createElement("div");
-    adHeading.id = "ad-heading";
-    adHeading.innerText = advertInfo[0];
-
+    const adHeading = createDomElement({type: "div", id:"ad-heading", classList: [], text: advertInfo[0]});
     adContainer.appendChild(adHeading);
 
     // Create paragraphs and add content to each paragraph
@@ -55,43 +69,50 @@ function createHome () {
 
 
     // Create a container for displaying hours on the screen
-    const hours = document.createElement("div");
-    hours.id = "service";
-    hours.className = "side";
-    hours.style.padding = "22px";
+    const hours = createDomElement({type: "div", id: "service", classList: ["side"], text: ""})
 
     // Create heading for hours container
-    const hoursHeading = document.createElement("div");
-    hoursHeading.className = "info-heading";
-    hoursHeading.innerText = "Hours";
-
+    const hoursHeading = createDomElement({type: "div", id: "", classList: ["info-heading"], text: "Hours"});
     hours.appendChild(hoursHeading);
 
+    
     // Create list for Actual Days
-    const days = document.createElement("ul");
+    const days = createDomElement({type: "ul", id: "days", classList: [], text: ""});
     days.id = "days";
     
+    // Append specific information from files 
     for (let i = 0; i < hoursInfo.length; i++) {
         if (!(i === 0) && !(i === 7)) {
-            let day = document.createElement("li");
-            day.innerText = hoursInfo[i];
+            let day = createDomElement({type: "li", id: "", classList: [], text: hoursInfo[i]});
             days.appendChild(day); 
 
         } else if (hoursInfo[i] == "") {
             days.appendChild(document.createElement("br"));
 
         } else {
-            let subHeading = document.createElement("div");
-            subHeading.className = "sub-heading";
-            subHeading.innerText = hoursInfo[i];
+            let subHeading = createDomElement({type: "div", id: "", classList: ["sub-heading"], text: hoursInfo[i]});
             days.appendChild(subHeading);
         }
     }
 
     hours.appendChild(days);
     containerDiv.appendChild(hours);    
-}
 
-createHome();
+    // Create container for location address
+    const location = createDomElement({type: "div", id: "location", classList: ["side"], text: ""});
+
+    // Create heading for location div
+    const locationHeading = createDomElement({type: "div", id: "", classList: ["info-heading"], text: "Location"});
+    location.appendChild(locationHeading);
+
+    // Create content wrapper for location text
+    const locationContent = createDomElement({type: "div", id: "", classList: [], text: ""});;
+    addressInfo.forEach((line) => {
+        locationContent.innerHTML += `${line}<br>`;
+    });
+
+    location.appendChild(locationContent);
+    containerDiv.appendChild(location);
+}
 
 export {createHome};
