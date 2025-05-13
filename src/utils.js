@@ -22,11 +22,4 @@ function createDomElement(elementObject) {
 
 }
 
-function appendChildren(parent, children) {
-    children.forEach((child) => {
-        parent.appendChild(child);
-    });
-}
-
-
-export { createDomElement, clearScreen, appendChildren };
+export { createDomElement, clearScreen };
