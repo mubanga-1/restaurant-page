@@ -11,4 +11,4 @@ and ready to tackle even the most soul-crushing legacy code.
 
 No more stale office brews or jittery shortcuts. Just smooth, 
 rich coffee that tastes like productivity—and feels like a second wind. 
-"Code Hard. Brew Smart.”
+<div id="slogan">"Code Hard. Brew Smart.”</div>
