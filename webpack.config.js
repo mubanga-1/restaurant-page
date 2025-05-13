@@ -23,16 +23,12 @@ module.exports = {
             },
             {
                 test: /\.txt/i,
-                loader: "raw-loader"
+                loader: "raw-loader",
             },
-            // {
-            //     test: /\.html$/i,
-            //     loader: "html-loader",
-            // },
-            // // {
-            // //     test: /\.(png|svg|jpg|jpeg|gif)$/i,
-            // //     type: "asset/resource",
-            // // },
+            {
+                test: /\.(ttf|woff|woff2)$/i,
+                type: "asset/resource",
+            }
         ],
     },
 };  
