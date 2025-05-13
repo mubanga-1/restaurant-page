@@ -7,7 +7,7 @@ import hours from "./hours.txt";
 // Default import text from address.txt
 import address from "./address.txt";
 
-// Default import createDomElement function from utlls.js
+// Import createDomElement function from utlls.js
 import { createDomElement } from "./utils";
 
 
