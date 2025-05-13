@@ -1,3 +1,10 @@
+function clearScreen() {
+    const content = document.querySelectorAll("#content > *");
+    for (let i = 0; i < content.length; i++) {
+        document.querySelector("#content").removeChild(content[i]);
+    }
+}
+
 function createDomElement(elementObject) {
     let newElement;
 
@@ -16,4 +23,4 @@ function createDomElement(elementObject) {
 }
 
 
-export { createDomElement };
+export { createDomElement, clearScreen };
