@@ -69,17 +69,14 @@ nav button:hover {
 #content {
     display: grid;
     grid-template-columns: 6fr 2fr;
-    grid-template-rows: 3fr 2fr;
+    height: 60vh;
 }
 
 #content > div {
-    display: flex;
-    flex-direction: column;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     margin-top: 1.5rem;
     color: #f1f2f3;
-    /* border: 1px solid #fff; */
 }
 
 .ad  #ad-heading {
@@ -91,11 +88,12 @@ nav button:hover {
 }
 
 #ad-heading, .ad p {
-    padding-left: 6.25rem;
+    padding-left: 1rem;
 }
 
 .side {
     grid-column: 2 / 3;
+    padding-right: 1rem;
 }
 
 .info-heading {
@@ -104,7 +102,7 @@ nav button:hover {
 
 .sub-heading {
     font-size: 1.3rem;
-    margin-bottom: .5rem;
+    padding-bottom: 1.5rem;
 }
 
 #days {
@@ -112,7 +110,7 @@ nav button:hover {
 }
 
 #days li {
-    margin-bottom: .25rem;
+    padding-bottom: .5rem;
 }
 
 #days, #location-content  {
