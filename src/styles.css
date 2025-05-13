@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("fonts/Open Sans/static/OpenSans-Regular.ttf");
+    font-weight: normal;
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,10 +13,12 @@
 
 body {
     background-color: grey;
-    background-image: url("./coffee.png");
+    background-image:linear-gradient(rgba(4, 9, 30, .7), rgba(4, 9, 30, .7)), url("./coffee.png");
     background-size: cover;
+    font-family: "Open Sans";
 }
 
+/* header section */
 header {
     padding: 1.4rem;
 }
@@ -42,7 +51,8 @@ nav button {
     background-color: transparent;
     border: none;
     border-radius: .8rem;
-    border-bottom: 3px solid transparent;      
+    border-bottom: 3px solid transparent;   
+    color: #fff;   
     transition: .5s ease;
 }
 
@@ -55,7 +65,60 @@ nav button:hover {
     cursor: pointer;
 }
 
+/* Main content section */
 #content {
-    color: white;
-    
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    grid-template-rows: 3fr 2fr;
+}
+
+#content > div {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-top: 1.5rem;
+    color: #f1f2f3;
+    /* border: 1px solid #fff; */
+}
+
+.ad  #ad-heading {
+    font-size: 1.7rem;
+}
+
+.ad p, #days li {
+    font-size: 1.125rem;
+}
+
+#ad-heading, .ad p {
+    padding-left: 6.25rem;
+}
+
+.side {
+    grid-column: 2 / 3;
+}
+
+.info-heading {
+    font-size: 1.7rem;
+}
+
+.sub-heading {
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+}
+
+#days {
+    list-style-type: none;
+}
+
+#days li {
+    margin-bottom: .25rem;
+}
+
+#days, #location-content  {
+    margin-left: 1.5rem;
+}
+
+.ad p {
+    margin-left: 2rem;
 }

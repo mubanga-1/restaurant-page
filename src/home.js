@@ -106,7 +106,7 @@ function createHome () {
     location.appendChild(locationHeading);
 
     // Create content wrapper for location text
-    const locationContent = createDomElement({type: "div", id: "", classList: [], text: ""});;
+    const locationContent = createDomElement({type: "div", id: "location-content", classList: [], text: ""});;
     addressInfo.forEach((line) => {
         locationContent.innerHTML += `${line}<br>`;
     });
