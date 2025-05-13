@@ -1,5 +1,5 @@
 import "./styles.css";  
-import {createHome} from "./home.js";
+import { createHome, createMenu, createContact, clearScreen } from "./pages.js";
 
 function highlight(element) {
     element.style.backgroundColor = "#f1f2f3";
@@ -24,10 +24,26 @@ const buttons = document.querySelectorAll(".links button");
 
 navBtnContainer.addEventListener("click", (event) => {
     let target = event.target;
+    clearScreen();
     
     for (let i = 0; i < buttons.length; i++) {
         if (buttons[i].id === target.id) {
             highlight(buttons[i]);
+
+            switch(target.id) {
+                case "home":
+                    createHome();
+                    break;
+
+                case "menu":
+                    createMenu();
+                    break;
+
+                case "contact":
+                    createContact();
+                    break;
+            }
+
         } else {
             unhighlight(buttons[i]);
         }
