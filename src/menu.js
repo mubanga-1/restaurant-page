@@ -2,7 +2,7 @@
 import menu from "./menu.txt";
 
 // Import createDomElement function from utlls.js
-import { createDomElement } from "./utils";
+import { createDomElement, appendChildren } from "./utils";
 
 
 // Separate menu options into diferent arrays and store then in an object
@@ -73,9 +73,8 @@ function displayOption (option, container, optionIndex) {
         menuList.appendChild(item);      
     }
 
-    container.appendChild(menuHeader);
-    container.appendChild(menuList);
-    container.appendChild(indicatorWrapper);
+    const menuContents = [menuHeader, menuList, indicatorWrapper];
+    appendChildren(container, menuContents);
 
     activeOption = optionIndex;
 }
@@ -107,9 +106,8 @@ function createMenu() {
     // Displays the first option by default 
     displayOption(menuOptions[0], menu, 0);
 
-    containerDiv.appendChild(leftScroller);
-    containerDiv.appendChild(menu);
-    containerDiv.appendChild(rightScroller);
+    const menuComponents = [leftScroller, menu, rightScroller];
+    appendChildren(containerDiv, menuComponents)
 
     // Switches to the option with a lower index assuming the current one's index is greater than zero
     leftScroller.addEventListener("click", () => {
