@@ -1,11 +1,16 @@
+// Apply styles through "side effect" importing
 import "./styles.css";  
+
+// Import function for adding sections to pages depending on which tab the user is on
 import { createHome, createMenu, createContact, clearScreen } from "./pages.js";
 
+// Used to change the colors of navigation buttons to show which tab has been selected
 function highlight(element) {
     element.style.backgroundColor = "#f1f2f3";
     element.style.color = "#A67B5B";
 }
 
+// Used to change the colors of navigation buttons to show that the user has changed their tab
 function unhighlight(element) {
     element.style.backgroundColor = "";
     element.style.color = "";
@@ -17,11 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
     createHome();
 });
 
-// Change between what information to display based on which navigation button is clicked
 
 const navBtnContainer = document.querySelector(".links");
 const buttons = document.querySelectorAll(".links button");
 
+// Detects when a navigation button is clicked and makes it visually apparent as which one
 navBtnContainer.addEventListener("click", (event) => {
     let target = event.target;
     clearScreen();
@@ -30,6 +35,7 @@ navBtnContainer.addEventListener("click", (event) => {
         if (buttons[i].id === target.id) {
             highlight(buttons[i]);
 
+            // Change between what information to display based on which navigation button is clicked
             switch(target.id) {
                 case "home":
                     createHome();
