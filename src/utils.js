@@ -1,3 +1,4 @@
+// Useful for clearing the main content of the browser window
 function clearScreen() {
     const content = document.querySelectorAll("#content > *");
     for (let i = 0; i < content.length; i++) {
@@ -5,6 +6,7 @@ function clearScreen() {
     }
 }
 
+// Useful for efficienty creating new DOM elements
 function createDomElement(elementObject) {
     let newElement;
 
@@ -22,6 +24,7 @@ function createDomElement(elementObject) {
 
 }
 
+// Useful for appending more that one child at a time
 function appendChildren(parent, children) {
     children.forEach((child) => {
         parent.appendChild(child);
