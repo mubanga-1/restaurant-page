@@ -31,5 +31,12 @@ function appendChildren(parent, children) {
     });
 } 
 
+// Useful for appending lines of text to a DOM element more efficiently
+function addText(element, textArray) {
+    for (let i = 0; i < textArray.length; i++) {
+        element.innerHTML += `${textArray[i]}<br>`;
+    }
+}
 
-export { createDomElement, clearScreen, appendChildren };
+
+export { createDomElement, clearScreen, appendChildren, addText };
