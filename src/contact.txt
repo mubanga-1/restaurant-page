@@ -1,9 +1,7 @@
 📞 Phone
 (555) 123-4567
-
 📧 Email
 hello@devcafe.co
-
 📱 Social Media
 Instagram: @devcafe
 Facebook: facebook.com/devcafe
