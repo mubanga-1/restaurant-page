@@ -93,6 +93,7 @@ function createMenu() {
 
     const containerDiv = document.querySelector("#content");
     containerDiv.style.display = "flex";
+    containerDiv.style.flexDirection = "row";
     containerDiv.style.width = "100%";
     containerDiv.style.gap = "1.25rem";
     containerDiv.style.justifyContent = "center";
@@ -102,12 +103,13 @@ function createMenu() {
     const leftScroller = createDomElement({type: "div", id:"left", classList: ["scroll"], text:"<"});
     const menu = createDomElement({type: "div", id:"menu-content", classList: [], text:""});
     const rightScroller = createDomElement({type: "div", id:"right", classList: ["scroll"], text:">"});  
-    
-    // Displays the first option by default 
-    displayOption(menuOptions[0], menu, 0);
 
     const menuComponents = [leftScroller, menu, rightScroller];
     appendChildren(containerDiv, menuComponents)
+
+    // Displays the first option by default 
+    displayOption(menuOptions[0], menu, 0);
+
 
     // Switches to the option with a lower index assuming the current one's index is greater than zero
     leftScroller.addEventListener("click", () => {
