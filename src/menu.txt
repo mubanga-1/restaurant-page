@@ -1,0 +1,28 @@
+Coffee☕
+Espresso — $2.50
+Americano — $3.00
+Cappuccino — $3.50
+Latte — $4.00
+Mocha — $4.25
+Cold Brew — $4.50
+
+Tea🍵
+English Breakfast — $2.75
+Earl Grey — $2.75
+Green Tea — $2.75
+Chai Latte — $3.75
+Herbal Infusion — $3.00
+
+Pastries🍰
+Croissant — $2.50
+Pain au Chocolat — $2.75
+Blueberry Muffin — $3.00
+Banana Bread — $2.50
+Cinnamon Roll — $3.25
+
+Sandwiches🥪
+Turkey & Swiss — $6.50
+Caprese (Mozzarella, Tomato, Basil) — $6.00
+Ham & Cheddar — $6.25
+Veggie Wrap — $5.75
+Grilled Cheese — $5.00
