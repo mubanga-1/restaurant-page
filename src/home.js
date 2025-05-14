@@ -8,7 +8,7 @@ import hours from "./hours.txt";
 import address from "./address.txt";
 
 // Import createDomElement function from utlls.js
-import { createDomElement, appendChildren } from "./utils";
+import { createDomElement, appendChildren, addText } from "./utils";
 
 
 const advertInfo = advert.split("\n");
@@ -98,9 +98,7 @@ const homePage = (function() {
 
         // Create content wrapper for location text
         const locationContent = createDomElement({type: "div", id: "location-content", classList: [], text: ""});;
-        addressInfo.forEach((line) => {
-            locationContent.innerHTML += `${line}<br>`;
-        });
+        addText(locationContent, addressInfo);
 
         location.appendChild(locationContent);
 
