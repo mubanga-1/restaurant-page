@@ -18,14 +18,14 @@ body {
     font-family: "Open Sans";
 }
 
+nav, .links, #menu-content {
+    display: flex;
+    align-items: center;
+}
+
 /* header section */
 header {
     padding: 1.4rem;
-}
-
-nav, .links {
-    display: flex;
-    align-items: center;
 }
 
 nav {
@@ -118,4 +118,52 @@ nav button:hover {
 #slogan {
     font-size: 1.5rem;
     margin-top: 2rem;
+}
+
+#menu-content {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.2rem;
+    width: 40%;
+}
+
+#menu-header {
+    margin-top: 3rem;
+    font-size: 2.4rem;
+}
+
+#menu-list {
+    list-style-type: none;
+}
+
+.menu-item {
+    font-size: 1.5rem;
+    margin-bottom: .8rem;
+}
+
+.scroll {
+    align-self: center;
+    font-size: 2rem;
+    border: 1px solid #8c8c8c;
+    transition: .8s ease;
+}
+
+.scroll:hover {
+    cursor: pointer;
+    background-color: #A67B5B;
+}
+
+#indicators {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.indicator {
+    background-color: #fff;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 6.25rem;
 }
