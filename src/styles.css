@@ -73,6 +73,8 @@ nav button:hover {
     color: #f1f2f3;
 }
 
+/* Home tab styles */
+
 .ad  #ad-heading {
     font-size: 1.7rem;
 }
@@ -108,7 +110,7 @@ nav button:hover {
 }
 
 #days, #location-content  {
-    margin-left: 1.5rem;
+    margin-left: 3rem;
 }
 
 .ad p {
@@ -119,6 +121,8 @@ nav button:hover {
     font-size: 1.5rem;
     margin-top: 2rem;
 }
+
+/* Menu tab styles */
 
 #menu-content {
     flex-direction: column;
@@ -167,3 +171,6 @@ nav button:hover {
     height: .5rem;
     border-radius: 6.25rem;
 }
+
+
+/* Contact tab styles */

@@ -59,7 +59,7 @@ const homePage = (function() {
         const hours = createDomElement({type: "div", id: "service", classList: ["side"], text: ""})
 
         // Create heading for hours container
-        const hoursHeading = createDomElement({type: "div", id: "", classList: ["info-heading"], text: "Hours"});
+        const hoursHeading = createDomElement({type: "div", id: "", classList: ["info-heading"], text: "⏰ Hours"});
         hours.appendChild(hoursHeading);
 
         
@@ -93,7 +93,7 @@ const homePage = (function() {
         const location = createDomElement({type: "div", id: "location", classList: ["side"], text: ""});
 
         // Create heading for location div
-        const locationHeading = createDomElement({type: "div", id: "", classList: ["info-heading"], text: "Location"});
+        const locationHeading = createDomElement({type: "div", id: "", classList: ["info-heading"], text: "📍 Location"});
         location.appendChild(locationHeading);
 
         // Create content wrapper for location text
