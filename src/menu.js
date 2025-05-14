@@ -116,7 +116,6 @@ function createMenu() {
             activeOption--;
 
             displayOption(menuOptions[activeOption], menu, activeOption);
-            console.log(activeOption);
         }
     })
 
@@ -127,7 +126,6 @@ function createMenu() {
             activeOption++;
 
             displayOption(menuOptions[activeOption], menu, activeOption);            
-            console.log(activeOption);
         } 
     });
 }
