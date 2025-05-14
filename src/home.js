@@ -19,6 +19,9 @@ const addressInfo = address.split("\n");
 function createHome () {
     // Modify content div in order to add content for home page
     const containerDiv = document.querySelector("#content"); 
+    containerDiv.style.display = "grid";
+    containerDiv.style.gridTemplateColumns = "6fr 2fr";
+    containerDiv.style.height = "60vh";     
     
     // // Create container for advertisement
     const adContainer = createDomElement({type: "div", id:"", classList: ["ad"], text:""});
