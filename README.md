@@ -1,7 +1,3 @@
-Certainly! Here's a polished and visually appealing `README.md` for your restaurant-page project, tailored to highlight its objectives, features, and deployment process:
-
----
-
 # 🍽️ Restaurant Page
 
 Welcome to the **Restaurant Page** project, developed as part of The Odin Project's curriculum. This project showcases dynamic DOM manipulation using vanilla JavaScript, emphasizing modular design and efficient state management.
